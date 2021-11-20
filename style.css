@@ -1,3 +1,221 @@
 h1 {
     color: red
 }
+
+body {
+    height: 100vh;
+    display: flex;
+    background: url("img/background.jpeg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* main card div container */
+.container{
+    border: 4px solid rgba(223, 129, 7, 0.918);
+    width: 700px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+/* child div container */
+.flash-card {
+    width:calc(25% - 10px);
+    height:calc(33.333% - 10px);
+    margin: auto;
+    position: relative;
+    transform:scale(1);
+    transform-style: preserve-3d;
+    transform: transform .5s;
+
+
+}
+.flash-card:active {
+transform: scale(.97);
+transition: transform .2s;
+}
+
+.flash-card.flip {
+    transform: rotateY(180deg)
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    background:grey;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+
+#score{
+    font-size: 25px;
+  }
+
+
+
+.gameStats{
+    font-family: 'Creepster', cursive;
+    color:#f4f4f4;
+    font-size:25px;
+    padding-top:calc(25% - 30px);
+    padding-left: 30px;
+  }
+  
+  .button{
+    background-color:red;
+    border-width: 1px;
+    border-color: grey;
+    color:white;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    background-color: red;
+    color: black;
+  }
+
+
+/* win condition styling */
+  .level-winner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4rem;
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 500ms ease;
+  }
+
+  .game-over .level-winner {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+
+
+  .title {
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+  .title.\--xl-large {
+    display: block;
+    position: relative;
+    font-size: 6rem;
+    letter-spacing: 10px;
+  }
+  .title.\--xl-large:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60%;
+    height: 4px;
+    transform: rotate(-10deg);
+    background-color: #111;
+  }
+
+
+
+
+
+
+
+/* about the game button */
+  #modal {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    overflow: auto;
+    display: none;
+  }
+  
+  #modal-textbox {
+    font-family: 'Architects Daughter', cursive;
+    background-color: #95A5A6;
+    height: 600px;
+    width: 700px;
+    border-radius: 2px;
+    margin: 0 auto;  
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 2%;
+    line-height: 120%;
+  }
+  
+  #modal-footer {
+    text-align: right;
+  }
+  
+  h3 {
+    padding-bottom: 15px;
+      font-size: 30px;
+    text-align: center;
+  }
+  
+  .modal-buttons {
+    background-color:red;
+    border-width: 1px;
+    border-color: grey;
+    color:white;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  #close {
+    position: center;
+    display: flex;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: white;
+    background-color: #011F3F;
+    cursor: pointer; 
+  }
+  
+  p {
+      font-size: 20px;
+      line-height: 25px;
+      text-align: center;
+      padding: 6px;
+  }
+  
+
+  .screenshot {
+    width: 100%;
+    height: 50%;
+    padding: 20px;
+  }

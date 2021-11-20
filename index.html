@@ -6,9 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flash Card</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:700|Play" rel="stylesheet">
 </head>
 <body>
-    <h1>aaaaaaaa</h1>
+        <!-- game status -->
+        <section class="gameStats">
+        <div id="score">Your Score Is: 0</div>
+        <div id="attempts">Attempts: 0</div>
+        <button class="button" onclick="newGame()" id="restart">Restart</button>
+        <button id="openModal" class="modal-buttons">About the Game</button>
+        </section>
+
+        <!-- win scenario -->
+        <section class="level-winner">
+            <h1 class="title --xl-large">Winner!</h1>
+          </section>
+
+          <!-- images -->
+    <section class="container">
+        <div class="flash-card" data-image="css">
+            <img class="front" src="img/css.png" alt="css logo">
+            <img class="back" src="img/back.png" alt="back">
+        </div>
+        <div class="flash-card" data-image="css">
+            <img class="front" src="img/css.png" alt="css logo">
+            <img class="back" src="img/back.png" alt="back">
+        </div>
+        <div class="flash-card" data-image="html">
+            <img class="front" src="img/html.png" alt="html logo">
+            <img class="back" src="img/back.png" alt="back">
+        </div>
+        <div class="flash-card" data-image="html">
+            <img class="front" src="img/html.png" alt="html logo">
+            <img class="back" src="img/back.png" alt="back">
+        </div>
+        <div class="flash-card" data-image="javascript">
+            <img class="front" src="img/javascript.png" alt="javascript logo">
+            <img class="back" src="img/back.png" alt="back">
+        </div>
+        <div class="flash-card" data-image="javascript">
+            <img class="front" src="img/javascript.png" alt="javascript logo">
+            <img class="back" src="img/back.png" alt="back">
+        </div>
+        <div class="flash-card" data-image="jQuery">
+            <img class="front" src="img/jQuery.png" alt="jQuery logo">
+            <img class="back" src="img/back.png" alt="back">
+        </div>
+        <div class="flash-card" data-image="jQuery">
+            <img class="front" src="img/jQuery.png" alt="jQuery logo">
+            <img class="back" src="img/back.png" alt="back">
+        </div>
+        <div class="flash-card" data-image="python">
+            <img class="front" src="img/python.png" alt="python logo">
+            <img class="back" src="img/back.png" alt="back">
+        </div>
+        <div class="flash-card" data-image="python">
+            <img class="front" src="img/python.png" alt="python logo">
+            <img class="back" src="img/back.png" alt="back">
+        </div>
+        <div class="flash-card" data-image="react">
+            <img class="front" src="img/react.png" alt="react logo">
+            <img class="back" src="img/back.png" alt="back">
+        </div>
+        <div class="flash-card" data-image="react">
+            <img class="front" src="img/react.png" alt="react logo">
+            <img class="back" src="img/back.png" alt="back">
+        </div> 
+    
+        <!-- about game button and info -->
+<div id="modal">
+  <div id="modal-textbox">
+
+  <h3>How to play Flash Card</h3>
+  <p>Flash cards game requires player to match 2 cards of same picture to continue. there will be 12 total cards or 6 pair.</p>
+  <p>The player clicks card to show image, one at a time. If the cards match, players continues to find rest of pairs. Play continues until all the cards have been matched. You should watch carefully and remember where cards are located. Then, when you click again, you may remember where to find a matching card.</p>
+  <p>If the cards do not match, the card flips to its original state, and player tries again.</p>      
+
+  <img class="screenshot"src="img/game.png" alt="Screenshot of game">
+  <div id="modal-footer">
+    <button id="close" class="modal-buttons">Close</button>
+  </div>
+  </div>
+</div>
+        
+    </section>
     <script src="app.js"></script>
 </body>
 </html>
