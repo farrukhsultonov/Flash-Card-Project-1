@@ -1,6 +1,8 @@
 ## Description
 
-Flash card matching game is based around programming language logos. Player has to match 6 pair of card to win the game. 
+Flash card matching game is based around programming language logos. Player has to match 6 pair of card to win the game.
+
+## Click [here](https://farrukhsultonov.github.io/Flash-Card-Project-1/) to play the game.
 
 ## Screenshots
 
